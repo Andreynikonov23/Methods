@@ -1,0 +1,28 @@
+package nick.pack;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        /*
+        Перед тобой метод signIn(), который приветствует пользователей сайта.
+        Сейчас он приветствует всех пользователей, а должен только зарегистрированных.
+        Имена всех незарегистрированных пользователей — "user".
+        Добавь проверку имени пользователя в начало метода signIn().
+        Если имя "user", прерви выполнение метода, используя ключевое слово return.
+         */
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите имя пользователя: ");
+        String name = scanner.nextLine();
+        signIn(name);
+    }
+    public static void signIn(String name){
+        String user = "user";
+        if (name.equals(user)){
+            return;
+        } else {
+            System.out.println("Добро пожаловать");
+            System.out.println("Очень по вам скучали)");
+        }
+    }
+}
